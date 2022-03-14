@@ -85,14 +85,14 @@ app.get('/', (req, res) => {
 app.post('/calculate', (req, res) => {
 
   var carbonEmission = 2.33;
-  var travel = 0;
-  var diet = 0;
-  var carTravel = 0;
-  var fuel = 0;
-  var shopping = 0;
-  var homeSize = 0;
-  var homePeople = 0;
-  var pet = 0;
+  var travel = 0.0;
+  var diet = 0.0;
+  var carTravel = 0.0;
+  var fuel = 0.0;
+  var shopping = 0.0;
+  var homeSize = 0.0;
+  var homePeople = 0.0;
+  var pet = 0.0;
 
   var responses = req.body;
 
