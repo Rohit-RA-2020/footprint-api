@@ -283,6 +283,7 @@ app.post('/calculate', (req, res) => {
   }
 
   carbonEmission = carbonEmission.toFixed(2);
+  carbonEmission = Number(carbonEmission);
 
   var result = { "result": carbonEmission, "travel": travel, "diet": diet, "carTravel": carTravel, "fuel": fuel, "shopping": shopping, "homeSize": homeSize, "homePeople": homePeople, "pet": pet };
   res.send(result);
