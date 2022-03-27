@@ -72,6 +72,45 @@ var questions = [
   },
 ];
 
+var blogs = [
+  {
+    "title": "How to Reduce Your Carbon Footprint",
+    "image": "https://static01.nyt.com/images/2019/05/07/smarter-living/07carbonfootprint-slide-SUBX/carbonfootprint-slide-SUBX-jumbo.jpg",
+    "desc": "A carbon footprint is the total amount of greenhouse gas emissions that come from the production...",
+    "author": "Livia Albeck-Ripka",
+    "link": "https://www.nytimes.com/guides/year-of-living-better/how-to-reduce-your-carbon-footprint"
+  },
+  {
+    "title": "How to cut your pet’s carbon footprint",
+    "image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/young-woman-walks-her-dog-in-california-park-royalty-free-image-1643614365.jpg?crop=1.00xw:1.00xh;0,0&resize=980:*",
+    "desc": "The way we care for our pets can drastically reduce your carbon footprint and that of your furry best friend...",
+    "author": "Nicoletta Maestrini",
+    "link" : "https://klima.com/blog/how-to-cut-your-pet-carbon-footprint-for-the-climate"
+  },
+  {
+    "title": "CARBON FOOTPRINT FACTSHEET",
+    "image": "https://css.umich.edu/sites/default/files/footcarbon_btn.gif",
+    "desc": "A carbon footprint is the total greenhouse gas (GHG) emissions caused directly and indirectly by an individual, organization, event or product...",
+    "author": "University of Michigan",
+    "link" : "https://css.umich.edu/factsheets/carbon-footprint-factsheet"
+  },
+  {
+    "title": "The 35 Easiest Ways to Reduce Carbon Footprint",
+    "image": "https://news.climate.columbia.edu/wp-content/uploads/2018/12/Carbon_Footprint_MilicaBuha-637x478.jpg",
+    "desc": "In the face of the recent  National Climate Assessment report on the threats of climate change...",
+    "author": "RENEE CHO",
+    "link" : "https://news.climate.columbia.edu/2018/12/27/35-ways-reduce-carbon-footprint/"
+  },
+  {
+    "title": "Carbon neutral since 2007",
+    "image": "https://sustainability.google/static/images/google-gleaf.gif",
+    "desc": "In our founding decade, Google became the first major company to be carbon neutral. In our second decade...",
+    "author": "Google",
+    "link" : "https://sustainability.google/commitments-europe/#"
+  },
+  
+]
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -81,6 +120,9 @@ app.get('/', (req, res) => {
 });
 
 
+app.get('/blogs', (req, res) => {
+  res.json(blogs);
+});
 
 app.post('/calculate', (req, res) => {
 
